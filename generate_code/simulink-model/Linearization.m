@@ -57,10 +57,10 @@ Ts = 0.001;
 %Q = diag([10 10 0.01 0.01 1]);
 
 %medium
-Q = diag([100 100 1 1 1]); % used in the real crazyflie 
+%Q = diag([100 100 1 1 1]); % used in the real crazyflie 
 
 % fast respons
-%Q = diag([1000 1000 1 1 10]); % used in simulink in report and in c-simulation 
+Q = diag([1000 1000 1 1 10]); % used in simulink in report and in c-simulation 
 
 % fastest
 %Q = diag([1000 1000 0.1 0.1 10]);
@@ -71,8 +71,8 @@ Q = diag([100 100 1 1 1]); % used in the real crazyflie
 % more fast
 %Q = diag([10000 10000 0.1 0.1 10]);
 
-%K_u = 0.0001;     % used in the report for simulink
-K_u = 0.0000001; % used in the real crazyflie
+K_u = 0.0001;     % used in the report for simulink
+%K_u = 0.0000001; % used in the real crazyflie
 R = K_u*eye(4);
 
 sysc = ss(double(Ac),double(Bc),eye(5),zeros(5,4));
